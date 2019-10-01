@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/orange"
+    android:layout_height="match_parent"
+    tools:context="com.app.indianoil.ChartActivity">
+
+    <RelativeLayout
+        android:id="@+id/rel_top"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:gravity="center_vertical"
+        android:background="@color/blue">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@+id/img_back"
+            android:text="@string/app_name"
+            android:textColor="@color/white"
+            android:textSize="22dp"
+            android:textStyle="bold"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dp"
+            android:layout_centerVertical="true"
+            />
+
+        <ImageView
+            android:id="@+id/img_back"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/backicon"
+            android:backgroundTint="@color/white"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentBottom="true"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rel_period"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_below="@+id/rel_top"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center_horizontal">
+
+        <TextView
+            android:id="@+id/txtperiodA"
+            android:layout_width="150dp"
+            android:layout_height="35dp"
+            android:text="FROM"
+            android:layout_toRightOf="@+id/txt"
+            android:textStyle="bold"
+            android:gravity="center_horizontal|center_vertical"
+            android:layout_marginRight="10dp"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:layout_centerHorizontal="true" />
+
+        <TextView
+            android:id="@+id/txtperiodB"
+            android:layout_width="150dp"
+            android:layout_height="35dp"
+            android:text="TO"
+            android:gravity="center_horizontal|center_vertical"
+            android:layout_toRightOf="@+id/txtperiodA"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"
+            android:layout_marginLeft="10dp"
+            android:textSize="18sp"
+            android:layout_centerHorizontal="true" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relfromA"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_marginTop="10dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_below="@+id/rel_period"
+        android:gravity="center_horizontal">
+
+        <EditText
+            android:id="@+id/edt_fromdate"
+            android:layout_width="150dp"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/txtfromA"
+            android:textColor="#FFFFFF"
+            android:hint="dd/mm/yyyy"
+            android:editable="false"
+            android:focusable="false"
+            android:gravity="center"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:textSize="16sp"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/round_corner_back_edittext" />
+
+        <EditText
+            android:id="@+id/edt_todate"
+            android:layout_width="150dp"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/edt_fromdate"
+            android:textColor="#FFFFFF"
+            android:hint="dd/mm/yyyy"
+            android:editable="false"
+            android:focusable="false"
+            android:gravity="center"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:textSize="16sp"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/round_corner_back_edittext" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rel_column"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/relfromA"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:id="@+id/txt_select_column"
+            android:layout_width="120dp"
+            android:layout_height="40dp"
+            android:gravity="center_vertical|center_horizontal"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:text="Select Column:"/>
+
+        <Spinner
+            android:id="@+id/spin_columnname"
+            android:layout_width="150dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="20dp"
+            android:textColor="@color/white"
+            android:layout_toRightOf="@+id/txt_select_column"
+            android:gravity="center"
+            android:layout_centerVertical="true"
+            android:dropDownWidth="230dp"
+            android:overlapAnchor="false"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:popupTheme="@style/AppTheme.Popup"
+            android:background="@drawable/spinner_bg"
+            android:popupBackground="@drawable/spinner_background_settings"
+            android:spinnerMode="dropdown"
+            android:dropDownVerticalOffset="50dp"/>
+
+        <Button
+            android:id="@+id/btn_showdata"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/back__button_drawable"
+            android:text="Show"
+            android:layout_marginRight="10dp"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rel_infotxt"
+        android:layout_width="match_parent"
+        android:layout_below="@+id/rel_column"
+        android:layout_height="50dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="Please zoom a pinch to show point values if data is more than 3 dates !"
+            android:textColor="@color/white"
+            android:textSize="16dp"
+            android:textStyle="bold"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dp"
+            android:layout_centerVertical="true"
+            />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rel_chart"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rel_infotxt"
+        android:layout_margin="10dp">
+
+        <!--<View-->
+            <!--android:id="@+id/viewleft"-->
+            <!--android:layout_width="1dp"-->
+            <!--android:layout_height="100dp"-->
+            <!--android:layout_centerVertical="true"-->
+            <!--android:layout_toRightOf="@+id/txt_columnleft"-->
+            <!--android:background="@color/white"-->
+            <!--android:visibility="invisible"-->
+            <!--android:layout_below="@+id/chart"/>-->
+
+        <!--<TextView-->
+            <!--android:id="@+id/txt_columnleft"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="10dp"-->
+            <!--android:layout_alignParentLeft="true"-->
+            <!--android:layout_centerVertical="true"-->
+            <!--android:visibility="invisible"-->
+            <!--android:rotation="270"-->
+            <!--android:gravity="center_vertical|center_horizontal"-->
+            <!--android:textColor="#FFFFFF"-->
+            <!--android:textSize="16sp"-->
+            <!--android:textStyle="bold"-->
+            <!--android:text="Column Name"/>-->
+
+        <com.github.mikephil.charting.charts.LineChart
+            android:id="@+id/chart"
+            android:layout_width="match_parent"
+            android:layout_height="400dp" />
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="60dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="15dp"
+            android:background="@color/white"
+            android:visibility="invisible"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/chart"/>
+
+        <TextView
+            android:id="@+id/txt_dates"
+            android:layout_width="60dp"
+            android:layout_height="30dp"
+            android:layout_below="@+id/view"
+            android:visibility="invisible"
+            android:layout_centerHorizontal="true"
+            android:gravity="center_vertical|center_horizontal"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:text="Dates"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

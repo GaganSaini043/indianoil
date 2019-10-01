@@ -1,0 +1,465 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/orange"
+    tools:context="com.app.indianoil.DetailActivity">
+
+    <RelativeLayout
+        android:id="@+id/rel_top"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:gravity="center_vertical"
+        android:background="@color/blue">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+           android:layout_toRightOf="@+id/img_back"
+            android:text="@string/app_name"
+            android:textColor="@color/white"
+            android:textSize="22dp"
+            android:textStyle="bold"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dp"
+            android:layout_centerVertical="true"
+            />
+
+        <ImageView
+            android:id="@+id/img_back"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/backicon"
+            android:backgroundTint="@color/white"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentBottom="true"/>
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:layout_below="@+id/rel_top">
+
+    <RelativeLayout
+        android:id="@+id/rel_center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rel_top"
+        android:padding="10dp"
+        android:background="@drawable/back_cardview">
+
+    <RelativeLayout
+        android:id="@+id/rel_date"
+        android:layout_width="match_parent"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="3dp"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/txt_date_text"
+            android:layout_width="150dp"
+            android:layout_height="40dp"
+            android:text="Date"
+            android:gravity="center_vertical"
+            android:textSize="16dp"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"/>
+
+        <TextView
+            android:id="@+id/txt_date"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:gravity="center_vertical"
+            android:layout_toRightOf="@+id/txt_date_text"
+            android:text=":  12/05/2019"
+            android:textSize="16dp"
+            android:layout_marginLeft="20dp"
+            android:textColor="#FFFFFF"/>
+
+    </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rel_time"
+            android:layout_width="match_parent"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="3dp"
+            android:layout_below="@+id/rel_date"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/txt_time_text"
+                android:layout_width="150dp"
+                android:layout_height="40dp"
+                android:text="Time"
+                android:gravity="center_vertical"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                android:textColor="#FFFFFF"/>
+
+            <TextView
+                android:id="@+id/txt_time"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:gravity="center_vertical"
+                android:layout_toRightOf="@+id/txt_time_text"
+                android:text=":  345"
+                android:layout_marginLeft="20dp"
+                android:textSize="16dp"
+                android:textColor="#FFFFFF"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/relrocode"
+            android:layout_width="match_parent"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="3dp"
+            android:layout_below="@+id/rel_time"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/txt_rocode_text"
+                android:layout_width="150dp"
+                android:layout_height="40dp"
+                android:text="Ro Code"
+                android:gravity="center_vertical"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                android:textColor="#FFFFFF"/>
+
+            <TextView
+                android:id="@+id/txt_rocode"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginLeft="20dp"
+                android:gravity="center_vertical"
+                android:layout_toRightOf="@+id/txt_rocode_text"
+                android:text=":  12345"
+                android:textSize="16dp"
+                android:textColor="#FFFFFF"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/relstartday"
+            android:layout_width="match_parent"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="3dp"
+            android:layout_below="@+id/relrocode"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/txt_stockstart_text"
+                android:layout_width="150dp"
+                android:layout_height="40dp"
+                android:text="Stock at Start of day(in KL)"
+                android:gravity="center_vertical"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                android:textColor="#FFFFFF"/>
+
+            <TextView
+                android:id="@+id/txt_stockstartday"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:gravity="center_vertical"
+                android:layout_marginLeft="20dp"
+                android:layout_toRightOf="@+id/txt_stockstart_text"
+                android:text=":  25"
+                android:textSize="16dp"
+                android:textColor="#FFFFFF"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/relendday"
+            android:layout_width="match_parent"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="3dp"
+            android:layout_below="@+id/relstartday"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/txt_stockend_text"
+                android:layout_width="150dp"
+                android:layout_height="40dp"
+                android:text="Stock at End of day(in KL)"
+                android:gravity="center_vertical"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                android:textColor="#FFFFFF"/>
+
+            <TextView
+                android:id="@+id/txt_stockendday"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:gravity="center_vertical"
+                android:layout_marginLeft="20dp"
+                android:layout_toRightOf="@+id/txt_stockend_text"
+                android:text=":  23"
+                android:textSize="16dp"
+                android:textColor="#FFFFFF"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/relreceipt"
+            android:layout_width="match_parent"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="3dp"
+            android:layout_below="@+id/relendday"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/txt_receipt_text"
+                android:layout_width="150dp"
+                android:layout_height="40dp"
+                android:text="Receipt on date(in KL)"
+                android:gravity="center_vertical"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                android:textColor="#FFFFFF"/>
+
+            <TextView
+                android:id="@+id/txt_receipt"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:gravity="center_vertical"
+                android:layout_marginLeft="20dp"
+                android:layout_toRightOf="@+id/txt_receipt_text"
+                android:text=":  0"
+                android:textSize="16dp"
+                android:textColor="#FFFFFF"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/relmsprice"
+            android:layout_width="match_parent"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="3dp"
+            android:layout_below="@+id/relreceipt"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/txt_msprice_text"
+                android:layout_width="150dp"
+                android:layout_height="40dp"
+                android:text="MS price(in Rs)"
+                android:gravity="center_vertical"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                android:textColor="#FFFFFF"/>
+
+            <TextView
+                android:id="@+id/txt_msprice"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:gravity="center_vertical"
+                android:layout_marginLeft="20dp"
+                android:layout_toRightOf="@+id/txt_msprice_text"
+                android:text=":  62.21"
+                android:textSize="16dp"
+                android:textColor="#FFFFFF"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/relhsdprice"
+            android:layout_width="match_parent"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="3dp"
+            android:layout_below="@+id/relmsprice"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/txt_hsdprice_text"
+                android:layout_width="150dp"
+                android:layout_height="40dp"
+                android:text="HSD price(in Rs)"
+                android:gravity="center_vertical"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                android:textColor="#FFFFFF"/>
+
+            <TextView
+                android:id="@+id/txt_hsdprice"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:gravity="center_vertical"
+                android:layout_marginLeft="20dp"
+                android:layout_toRightOf="@+id/txt_hsdprice_text"
+                android:text=":  72.65"
+                android:textSize="16dp"
+                android:textColor="#FFFFFF"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rellastpricechange"
+            android:layout_width="match_parent"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="3dp"
+            android:layout_below="@+id/relhsdprice"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/txt_lastprice_text"
+                android:layout_width="150dp"
+                android:layout_height="40dp"
+                android:text="Last price change date-time"
+                android:gravity="center_vertical"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                android:textColor="#FFFFFF"/>
+
+            <TextView
+                android:id="@+id/txt_lastprice"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:gravity="center_vertical"
+                android:layout_marginLeft="20dp"
+                android:layout_toRightOf="@+id/txt_lastprice_text"
+                android:text=":  22/3/19 620"
+                android:textSize="16dp"
+                android:textColor="#FFFFFF"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/relsalemsdu1"
+            android:layout_width="match_parent"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="3dp"
+            android:layout_below="@+id/rellastpricechange"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/txt_salemsdu1_text"
+                android:layout_width="150dp"
+                android:layout_height="40dp"
+                android:text="Sale from MS from DU-1"
+                android:gravity="center_vertical"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                android:textColor="#FFFFFF"/>
+
+            <TextView
+                android:id="@+id/txt_salemsdu1"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:gravity="center_vertical"
+                android:layout_marginLeft="20dp"
+                android:layout_toRightOf="@+id/txt_salemsdu1_text"
+                android:text=":  1"
+                android:textSize="16dp"
+                android:textColor="#FFFFFF"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/relsalemsdu2"
+            android:layout_width="match_parent"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="3dp"
+            android:layout_below="@+id/relsalemsdu1"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/txt_salemsdu2_text"
+                android:layout_width="150dp"
+                android:layout_height="40dp"
+                android:text="Sale from MS from DU-2"
+                android:gravity="center_vertical"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                android:textColor="#FFFFFF"/>
+
+            <TextView
+                android:id="@+id/txt_salemsdu2"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:gravity="center_vertical"
+                android:layout_marginLeft="20dp"
+                android:layout_toRightOf="@+id/txt_salemsdu2_text"
+                android:text=":  1"
+                android:textSize="16dp"
+                android:textColor="#FFFFFF"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/relsalehsddu1"
+            android:layout_width="match_parent"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="3dp"
+            android:layout_below="@+id/relsalemsdu2"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/txt_salehsddu1_text"
+                android:layout_width="150dp"
+                android:layout_height="40dp"
+                android:text="Sale from HSD from DU-1"
+                android:gravity="center_vertical"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                android:textColor="#FFFFFF"/>
+
+            <TextView
+                android:id="@+id/txt_salehsddu1"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:gravity="center_vertical"
+                android:layout_marginLeft="20dp"
+                android:layout_toRightOf="@+id/txt_salehsddu1_text"
+                android:text=":  1"
+                android:textSize="16dp"
+                android:textColor="#FFFFFF"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/relsalehsddu2"
+            android:layout_width="match_parent"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="3dp"
+            android:layout_below="@+id/relsalehsddu1"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/txt_salehsddu2_text"
+                android:layout_width="150dp"
+                android:layout_height="40dp"
+                android:text="Sale from HSD from DU-2"
+                android:gravity="center_vertical"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                android:textColor="#FFFFFF"/>
+
+            <TextView
+                android:id="@+id/txt_salehsddu2"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:gravity="center_vertical"
+                android:layout_marginLeft="20dp"
+                android:layout_toRightOf="@+id/txt_salehsddu2_text"
+                android:text=":  1"
+                android:textSize="16dp"
+                android:textColor="#FFFFFF"/>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

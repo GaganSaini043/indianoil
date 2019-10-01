@@ -1,0 +1,377 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/orange"
+    >
+    <RelativeLayout
+        android:id="@+id/rel_top"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:gravity="center_vertical"
+        android:background="@color/blue">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@+id/img_back"
+            android:text="@string/app_name"
+            android:textColor="@color/white"
+            android:textSize="22dp"
+            android:textStyle="bold"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dp"
+            android:layout_centerVertical="true" />
+
+        <ImageView
+            android:id="@+id/img_back"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/backicon"
+            android:backgroundTint="@color/white"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentBottom="true"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rel_roname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rel_top"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp">
+
+        <TextView
+            android:id="@+id/txt_roname_txt"
+            android:layout_width="140dp"
+            android:layout_height="40dp"
+            android:gravity="center_vertical"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:text="RO Name :"/>
+
+        <TextView
+            android:id="@+id/txt_roname"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/txt_roname_txt"
+            android:textColor="#FFFFFF"
+            android:gravity="center"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_marginLeft="20dp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rel_button_top"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_below="@+id/rel_roname"
+        android:layout_marginTop="20dp">
+
+        <Button
+            android:id="@+id/btn_showfulldata"
+            android:layout_width="150dp"
+            android:layout_height="40dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/back__button_drawable"
+            android:layout_alignParentLeft="true"
+            android:text="Show Full Data"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btn_compare"
+            android:layout_width="150dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="10dp"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/back__button_drawable"
+            android:text="Compare Period"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/rel_columns"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_below="@+id/rel_button_top">
+
+        <RelativeLayout
+            android:id="@+id/rel_column"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp">
+
+            <TextView
+                android:id="@+id/txt_select_column"
+                android:layout_width="140dp"
+                android:layout_height="40dp"
+                android:gravity="center_vertical"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:text="Column Name :"/>
+
+            <Spinner
+                android:id="@+id/spin_columnname"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginLeft="20dp"
+                android:textColor="@color/white"
+                android:layout_toRightOf="@+id/txt_select_column"
+                android:gravity="center"
+                android:layout_centerVertical="true"
+                android:dropDownWidth="230dp"
+                android:overlapAnchor="false"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:layout_alignParentRight="true"
+                android:popupTheme="@style/AppTheme.Popup"
+                android:background="@drawable/spinner_bg"
+                android:popupBackground="@drawable/spinner_background_settings"
+                android:spinnerMode="dropdown"
+                android:dropDownVerticalOffset="50dp"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rel_fromdate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rel_column"
+            android:layout_marginTop="20dp">
+
+            <TextView
+                android:id="@+id/txt_fromdate"
+                android:layout_width="140dp"
+                android:layout_height="40dp"
+                android:gravity="center_vertical"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:text="From Date :"/>
+
+            <EditText
+                android:id="@+id/edt_from_date"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/txt_fromdate"
+                android:textColor="#FFFFFF"
+                android:hint="dd/mm/yyyy"
+                android:editable="false"
+                android:focusable="false"
+                android:gravity="center"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:textSize="16sp"
+                android:layout_marginLeft="20dp"
+                android:background="@drawable/round_corner_back_edittext" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rel_todate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_below="@+id/rel_fromdate">
+
+            <TextView
+                android:id="@+id/txt_to_date"
+                android:layout_width="140dp"
+                android:layout_height="40dp"
+                android:gravity="center_vertical"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:text="To Date :"/>
+
+            <EditText
+                android:id="@+id/edt_to_date"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/txt_to_date"
+                android:textColor="#FFFFFF"
+                android:hint="dd/mm/yyyy"
+                android:editable="false"
+                android:focusable="false"
+                android:gravity="center"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:textSize="16sp"
+                android:layout_marginLeft="20dp"
+                android:background="@drawable/round_corner_back_edittext" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rel_button"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/rel_todate"
+            android:layout_marginTop="30dp">
+
+            <Button
+                android:id="@+id/btn_showdata"
+                android:layout_width="150dp"
+                android:layout_height="40dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/back__button_drawable"
+                android:layout_alignParentLeft="true"
+                android:text="Show Data"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/btn_result"
+                android:layout_width="150dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="10dp"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/back__button_drawable"
+                android:text="Show Result"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rel_btn_analysis"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/rel_absolute"
+            android:layout_marginTop="10dp">
+
+            <Button
+                android:id="@+id/btn_analysis"
+                android:layout_width="150dp"
+                android:layout_height="40dp"
+                android:layout_marginRight="10dp"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/back__button_drawable"
+                android:text="Show Analysis"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+        <!--<RelativeLayout-->
+            <!--android:id="@+id/rel_absolute"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_below="@+id/rel_button"-->
+            <!--android:layout_marginTop="20dp"-->
+            <!--android:visibility="gone"-->
+            <!--android:layout_height="wrap_content">-->
+
+            <!--<TextView-->
+                <!--android:id="@+id/txt_absolute"-->
+                <!--android:layout_width="140dp"-->
+                <!--android:layout_height="40dp"-->
+                <!--android:gravity="center_vertical"-->
+                <!--android:textColor="#FFFFFF"-->
+                <!--android:textSize="16sp"-->
+                <!--android:textStyle="bold"-->
+                <!--android:text="Result in absolute terms :"/>-->
+
+            <!--<TextView-->
+                <!--android:id="@+id/edt_absolute"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="40dp"-->
+                <!--android:layout_centerVertical="true"-->
+                <!--android:layout_toRightOf="@+id/txt_absolute"-->
+                <!--android:textColor="#FFFFFF"-->
+                <!--android:gravity="center"-->
+                <!--android:paddingLeft="10dp"-->
+                <!--android:paddingRight="10dp"-->
+                <!--android:textSize="16sp"-->
+                <!--android:textColorHint="#FFFFFF"-->
+                <!--android:layout_marginLeft="20dp"-->
+                <!--android:background="@drawable/back_cardview" />-->
+
+
+        <!--</RelativeLayout>-->
+
+        <RelativeLayout
+            android:id="@+id/rel_absolute"
+            android:layout_width="match_parent"
+            android:layout_below="@+id/rel_button"
+            android:layout_marginTop="20dp"
+            android:visibility="gone"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/txt_absolute"
+                android:layout_width="140dp"
+                android:layout_height="40dp"
+                android:gravity="center_vertical"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:text="Result in absolute terms :"/>
+
+            <RelativeLayout
+                android:id="@+id/rel_edtpercent"
+                android:layout_width="match_parent"
+                android:layout_toRightOf="@+id/txt_absolute"
+                android:visibility="visible"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:layout_marginLeft="20dp"
+                android:background="@drawable/back_cardview"
+                android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/edt_absolute"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/img_iconresult"
+                android:textColor="#FFFFFF"
+                android:gravity="center"
+                android:textSize="16sp"
+                android:textColorHint="#FFFFFF"
+                android:layout_marginLeft="20dp" />
+
+            <ImageView
+                android:id="@+id/img_iconresult"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true" />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/orange"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:gravity="center_vertical"
+        android:background="@color/blue">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:text="@string/app_name"
+            android:textColor="@color/white"
+            android:textSize="22dp"
+            android:textStyle="bold"
+            android:gravity="center_vertical"
+            android:paddingLeft="20dp"
+            android:layout_centerVertical="true"
+            />
+        <ImageView
+            android:id="@+id/img_refresh"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:background="@drawable/refresh"
+            android:layout_marginTop="10dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="20dp"
+            android:backgroundTint="#FFFFFF"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true">
+
+        <!--<TextView-->
+        <!--android:id="@+id/txt_login"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="Enter RO Code"-->
+        <!--android:layout_centerHorizontal="true"-->
+        <!--android:textColor="#FFFFFF"-->
+        <!--android:layout_marginTop="40dp"-->
+        <!--android:textStyle="bold"-->
+        <!--android:textSize="20sp"/>-->
+
+        <RelativeLayout
+            android:id="@+id/rel_ro_code"
+            android:layout_width="250dp"
+            android:layout_height="50dp"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/roundcorneredittext"
+            android:layout_marginTop="30dp">
+
+            <EditText
+                android:id="@+id/edt_ro_code"
+                android:layout_width="250dp"
+                android:layout_height="50dp"
+                android:layout_centerVertical="true"
+                android:hint="Enter RO Code"
+                android:textColor="#FFFFFF"
+                android:inputType="number"
+                android:gravity="center_horizontal|center_vertical"
+                android:textSize="16sp"
+                android:textColorHint="#FFFFFF"
+                android:layout_marginLeft="10dp"
+                android:background="@null"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rel_button"
+            android:layout_width="250dp"
+            android:layout_height="50dp"
+            android:layout_below="@+id/rel_ro_code"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/back__button_drawable"
+            android:layout_marginTop="20dp">
+
+            <Button
+                android:id="@+id/btn_next"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:text="Next"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#FFFFFF"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+
+        </RelativeLayout>
+
+        <!--<RelativeLayout-->
+        <!--android:id="@+id/rel_forgot"-->
+        <!--android:layout_width="250dp"-->
+        <!--android:layout_height="30dp"-->
+        <!--android:layout_below="@+id/rel_button"-->
+        <!--android:layout_centerHorizontal="true"-->
+        <!--android:layout_marginTop="10dp">-->
+
+        <!--<TextView-->
+        <!--android:id="@+id/txt_forgot"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_centerVertical="true"-->
+        <!--android:text="Forgot password ?"-->
+        <!--android:gravity="center"-->
+        <!--android:textColor="#FFFFFF"-->
+        <!--android:textSize="16sp"-->
+        <!--android:textStyle="bold"-->
+        <!--android:textColorHint="#FFFFFF"-->
+        <!--android:background="@null"/>-->
+
+
+        <!--</RelativeLayout>-->
+
+
+    </RelativeLayout>
+
+</RelativeLayout>
